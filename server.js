@@ -89,3 +89,5 @@ app.listen(process.env.PORT, () => {
      console.log("server listening on port: 4000");
 });
 
+//bash
+//PORT=4000 node server.js
