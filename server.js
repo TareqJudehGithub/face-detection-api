@@ -79,14 +79,13 @@ app.delete("/profile/:id",(req, res) => {
      })[0];
 
           const index = database.users.indexOf(user);
-          database.users.splice(index, 1);
-          
+          database.users.splice(index, 1);       
           res.json({message: `User ${id} deleted.`});
           res.status(400).json("Error deleting user");
      });
 
-app.listen(process.env.PORT, () => {
-     console.log("server listening on port: 4000");
+app.listen(process.env.PORT || 4000, () => {
+     console.log(`server listening on port: ${processe.env.PORT}`);
 });
 
 //bash
