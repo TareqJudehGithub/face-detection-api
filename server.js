@@ -80,7 +80,7 @@ app.delete("/profile/:id",(req, res) => {
      });
 
 app.listen(process.env.PORT || 4000, () => {
-     console.log(`server listening on port: ${processe.env.PORT}`);
+     console.log(`server listening on port: ${process.env.PORT}`);
 });
 
 //bash
