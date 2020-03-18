@@ -29,12 +29,7 @@ app.use(express.json());
 app.use(cors());
 
 // users query
-app.get("/", (req, res) => {
-     knex.select("*").from("users").orderBy("id")
-     .then(users => res.json(users))
-     .catch(err => res.status(400).json("Error returning users"));
-});
-
+app.get("/", (req, res) => { res.send("It is working!") });
 
 //endpoints:
 //user sign-up
