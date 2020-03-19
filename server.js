@@ -11,10 +11,8 @@ const imageCounter = require("./controllers/imageCounter");
 const knex = require('knex')({
      client: 'pg',
      connection: {
-       host : 'postgresql-tetrahedral-92661',
-       user : 'tareq',
-       password : 'pass',
-       database : 'face_detection'
+       host : process.env.DATABASE_URL,
+       ssl: true
      }
    });
 
