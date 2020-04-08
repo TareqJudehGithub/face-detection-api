@@ -27,4 +27,4 @@ const imageCounter = (knex) => (req, res) => {
  module.exports ={
       counterHandler: imageCounter,
       handleApiCall
- }
+ };

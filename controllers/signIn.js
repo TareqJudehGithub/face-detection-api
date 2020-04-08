@@ -16,8 +16,8 @@ const signIn = (knex, bcrypt) => (req, res) => {
           res.status(400).json("Invalid username/password."); 
      })
      .catch(err => res.status(400).json("Code error!"));
-}
+};
 
 module.exports = {
      signInHandler: signIn
-}
+};

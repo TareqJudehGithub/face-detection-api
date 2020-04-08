@@ -5,7 +5,7 @@ const signUp = (knex, bcrypt, saltRounds) => (req, res) => {
      }
      const hash = bcrypt.hashSync(password, saltRounds)
      console.log(password);
-     //create a transation when we have to do more than 2 things at once:
+     //create a transaction when we have to do more than 2 things at once:
      knex.transaction(trx => {  //trx to perform transactions
         
           trx.insert({
@@ -28,7 +28,7 @@ const signUp = (knex, bcrypt, saltRounds) => (req, res) => {
           })      
           })  
           .then(trx.commit)    //commit to make sure all the above are added.
-          .catch(trx.rollback) //incase anything failed
+          .catch(trx.rollback) //in case anything failed
      })
           .catch(err => res.status(400).json("Error signing up!" + err));   
 };

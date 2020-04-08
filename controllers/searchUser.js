@@ -12,7 +12,6 @@ const searchUser = (knex) => (req, res) => {
      })
      .catch(err => res.status(400).json("Error in searching user!"));
 };
-
 module.exports = {
      serachHandler: searchUser
 };

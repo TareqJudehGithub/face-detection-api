@@ -50,13 +50,11 @@ app.put("/profile/:id", (req, res) => {
      let user = database.users.filter(user => {
           return user.id === id;
      })[0];
-
      const index = database.users.indexOf(user);
      const keys = Object.keys(req.body);
      keys.map(key => {
           user[key] = req.body[key];
      });
-
      database.users[index] = user;
      res.json(database.users[index]);
      res.status(400).json("Edit user failed!");
@@ -65,8 +63,7 @@ app.put("/profile/:id", (req, res) => {
 //delete user
 app.delete("/profile/:id",(req, res) => {
 
-     const { id } = req.params;
-     
+     const { id } = req.params;    
      let user = database.users.filter(user => {
           return user.id === id;
      })[0];
